@@ -1,0 +1,122 @@
+html {
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  background-color: #d9ffb3;
+  text-align: center;
+  min-width: 320px;
+}
+
+.container {
+  background-color: #ffffe6;
+  border-radius: 4px;
+  margin: 0 auto;
+  width: 75%;
+  max-width: 900px;
+  padding: 20px 10px 10px
+}
+
+#description {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.labels {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px
+}
+
+.inputs {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+  float: left;
+  vertical-align: middle;
+}
+
+.input-field,
+textarea {
+  height: 20px;
+  width: 100%;
+  padding: .5em;
+  margin: 10px;
+  border-radius: 2px;
+  border: 1px solid #c0c0c0;
+}
+
+#comments {
+  resize: vertical;
+  height: 60px;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  float: left;
+
+}
+.dropdown {
+  height: 30px;
+  width: 100%;
+  padding: .5em;
+  margin: 10px;
+  margin-top: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#submit {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 15px;
+  color: white;
+  background-color: #0d9d54;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 520px) {
+  .input-field {
+    width: 80%;
+  }
+  .dropdown {
+    width: 90%;
+  }
+    .labels {
+    width: 40%;
+    text-align: right;
+  }
+  .inputs {
+    width: 40%;
+    float: none;
+  }
+}
+
+@media screen and (min-width: 833px) {
+/*   .labels {
+    width: 40%;
+    text-align: right;
+  } */
+/*   .inputs {
+    width: 40%;
+    float: none;
+  } */
+  .input-field {
+    width: 280px;
+  }
+  .dropdown {
+    width: 145px;
+  }
+}
