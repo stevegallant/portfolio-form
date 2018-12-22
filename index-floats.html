@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Steve Gallant">
+    <meta Name="description" content="Sample responsive web form">
+    <title>Take the survey!</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <h1 id="title">Club Member Survey Form</h1>
+    <div class="container">
+      <p id="description">Let us know how we can improve</p>
+
+    <form id="survey-form">
+      <div class="labels">
+        <label id="name-label" for="name">* Name:</label>
+      </div>
+      <div class="inputs">
+      <input id="name" class="input-field" type="text" placeholder="Enter your name" required>
+      </div>
+      <div class="labels">
+        <label id="email-label" for="email">* Email: </label>
+      </div>
+      <div class="inputs">
+        <input id="email" class="input-field" type="email" placeholder="Enter your email" required>
+      </div>
+      <div class="labels">
+        <label id="number-label" for="number">* Age: </label>
+      </div>
+      <div class="inputs">
+        <input id="number" class="input-field" type="number" min="1" max="110" placeholder="Age" required>
+      </div>
+      <div class="labels">
+        <label for="dropdown">Which option best describes your current role?</label>
+      </div>
+      <div class="inputs">
+        <select id="dropdown" class="dropdown">
+        <option value="">Select an option</option>
+        <option value="student">Student</option>
+        <option value="fulltimejob">Full Time Job</option>
+        <option value="fulltimelearner">Full Time Learner</option>
+        <option value="withheld">Prefer not to say</option>
+        <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="labels">
+        <label for="recommend">* How likely is it that you would recommend us to a friend?</label>
+      </div>
+      <div class="inputs">
+        <ul style="list-style: none">
+          <li class="radio">
+            <input id="definitely" value="Definitely" name="recommend" type="radio" checked>
+            <label for="definitely">Definitely</label>
+          </li>
+          <li class="radio">
+            <input id="maybe" value="Maybe" name="recommend" type="radio">
+            <label for="maybe">Maybe</label>
+          </li>
+          <li class="radio">
+            <input id="notSure" value="Not Sure" name="recommend" type="radio">
+            <label for="notSure">Not sure</label>
+          </li>
+        </ul>
+      </div>
+      <div class="labels"><label for="like">What do you like most:</label>
+      </div>
+      <div class="inputs">
+        <select id="like" class="dropdown">
+        <option value="">Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="open-source">Open Source</option>
+      </select>
+      </div>
+
+      <div class="labels">
+        <label for="improvements">Things that should be improved in the future (Check all that apply):</label>
+      </div>
+      <div class="inputs">
+        <ul style="list-style: none">
+          <li class="checkbox">
+            <input id="front-end" value="Front-end Projects" name="improvements" type="checkbox">
+            <label for="front-end">Front-end Projects</label>
+          </li>
+          <li class="checkbox">
+            <input id="back-end" value="Back-end Projects" name="improvements" type="checkbox">
+            <label for="back-end">Back-end Projects</label>
+          </li>
+          <li class="checkbox">
+            <input id="data-vis" value="Data Visualization" name="improvements" type="checkbox">
+            <label for="data-vis">Data Visualization</label>
+          </li>
+          <li class="checkbox">
+            <input id="challenges" value="Challenges" name="improvements" type="checkbox">
+            <label for="challenges">Challenges</label>
+          </li>
+          <li class="checkbox">
+            <input id="open-source" value="Open Source Community" name="improvements" type="checkbox">
+            <label for="open-source">Open Source Community</label>
+          </li>
+          <li class="checkbox">
+            <input id="gitter" value="Gitter help rooms" name="improvements" type="checkbox">
+            <label for="gitter">Gitter help rooms</label>
+          </li>
+          <li class="checkbox">
+          <input id="videos" value="Videos" name="improvements" type="checkbox">
+            <label for="videos">Videos</label>
+          </li>
+          <li class="checkbox">
+            <input id="meetups" value="City Meetups" name="improvements" type="checkbox">
+            <label for="meetups">City Meetups</label>
+          </li>
+          <li class="checkbox">
+            <input id="wiki" value="Wiki" name="improvements" type="checkbox">
+            <label for="wiki">Wiki</label>
+          </li>
+          <li class="checkbox">
+            <input id="forum" value="Forum" name="improvements" type="checkbox">
+            <label for="forum">Forum</label>
+          </li>
+          <li class="checkbox">
+            <input id="addl-courses" value="Additional Courses" name="improvements" type="checkbox">
+            <label for="addl-courses">Additional Courses</label>
+          </li>
+        </ul>
+      </div>
+      <div class="labels">
+        <label for="comments">Any Comments or Suggestions?</label>
+      </div>
+      <div class="inputs">
+        <textarea id="comments" class="input-field" placeholder="Enter your comments here..."></textarea>
+      </div>
+      <input id="submit" type="submit">
+    </form>
+    </div>
+  </body>
+</html>

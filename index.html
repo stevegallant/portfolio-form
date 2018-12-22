@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en-US">
   <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Steve Gallant">
+    <meta Name="description" content="Sample responsive web form">
+    <title>Club Survey</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
-    <h1 id="title">Survey Form</h1>
+    <h1 id="title">Club Member Survey Form</h1>
     <div class="container">
-      <p id="description">Let us know how we can improve</p>
+      <p id="description">Let's make our club better</p>
 
     <form id="survey-form">
       <div class="labels">
@@ -23,103 +28,81 @@
         <input id="email" class="input-field" type="email" placeholder="Enter your email" required>
       </div>
       <div class="labels">
-        <label id="number-label" for="number">* Age: </label>
-      </div>
-      <div class="inputs">
-        <input id="number" class="input-field" type="number" min="1" max="110" placeholder="Age" required>
-      </div>
-      <div class="labels">
-        <label for="dropdown">Which option best describes your current role?</label>
-      </div>
-      <div class="inputs">
-        <select id="dropdown" class="dropdown">
-        <option value="">Select an option</option>
-        <option value="student">Student</option>
-        <option value="fulltimejob">Full Time Job</option>
-        <option value="fulltimelearner">Full Time Learner</option>
-        <option value="withheld">Prefer not to say</option>
-        <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="labels">
-        <label for="recommend">* How likely is it that you would recommend us to a friend?</label>
+        <label for="recommend">* How many years a member?</label>
       </div>
       <div class="inputs">
         <ul style="list-style: none">
           <li class="radio">
-            <input id="definitely" value="Definitely" name="recommend" type="radio" checked>
-            <label for="definitely">Definitely</label>
+            <input id="definitely" value="0-1yr" name="recommend" type="radio" checked>
+            <label for="definitely">0 to 1 yr</label>
           </li>
           <li class="radio">
-            <input id="maybe" value="Maybe" name="recommend" type="radio">
-            <label for="maybe">Maybe</label>
+            <input id="maybe" value="1-5yrs" name="recommend" type="radio">
+            <label for="maybe">1 to 5 yrs</label>
           </li>
           <li class="radio">
-            <input id="notSure" value="Not Sure" name="recommend" type="radio">
-            <label for="notSure">Not sure</label>
+            <input id="notSure" value="5+yrs" name="recommend" type="radio">
+            <label for="notSure">5+ years</label>
           </li>
         </ul>
       </div>
-      <div class="labels"><label for="like">What do you like most:</label>
+      <div class="labels">
+        <label for="dropdown">What do you enjoy most about the club?</label>
       </div>
       <div class="inputs">
-        <select id="like" class="dropdown">
+        <select id="dropdown" class="dropdown">
         <option value="">Select an option</option>
-        <option value="challenges">Challenges</option>
-        <option value="projects">Projects</option>
-        <option value="community">Community</option>
-        <option value="open-source">Open Source</option>
-      </select>
+        <option value="socializing">Socializing</option>
+        <option value="clubactivities">Club-organized Activities</option>
+        <option value="smallgroup">Forming smaller-group activities</option>
+        <option value="swag">Cool swag!</option>
+        <option value="other">Other (comment below)</option>
+        </select>
       </div>
-
       <div class="labels">
         <label for="improvements">Things that should be improved in the future (Check all that apply):</label>
       </div>
       <div class="inputs">
         <ul style="list-style: none">
           <li class="checkbox">
-            <input id="front-end" value="Front-end Projects" name="improvements" type="checkbox">
-            <label for="front-end">Front-end Projects</label>
+            <input id="direction" value="Overall Club Direction" name="improvements" type="checkbox">
+            <label for="direction">Overall Club Direction</label>
           </li>
           <li class="checkbox">
-            <input id="back-end" value="Back-end Projects" name="improvements" type="checkbox">
-            <label for="back-end">Back-end Projects</label>
+            <input id="meetings" value="Meetings" name="improvements" type="checkbox">
+            <label for="meetings">Meetings</label>
           </li>
           <li class="checkbox">
-            <input id="data-vis" value="Data Visualization" name="improvements" type="checkbox">
-            <label for="data-vis">Data Visualization</label>
+            <input id="events" value="Events" name="improvements" type="checkbox">
+            <label for="events">Events</label>
           </li>
           <li class="checkbox">
-            <input id="challenges" value="Challenges" name="improvements" type="checkbox">
-            <label for="challenges">Challenges</label>
+            <input id="finances" value="Finances" name="improvements" type="checkbox">
+            <label for="finances">Finances</label>
           </li>
           <li class="checkbox">
-            <input id="open-source" value="Open Source Community" name="improvements" type="checkbox">
-            <label for="open-source">Open Source Community</label>
+            <input id="merchandise" value="Merchandise" name="improvements" type="checkbox">
+            <label for="merchandise">Merchandise</label>
           </li>
           <li class="checkbox">
-            <input id="gitter" value="Gitter help rooms" name="improvements" type="checkbox">
-            <label for="gitter">Gitter help rooms</label>
+            <input id="newsletter" value="Newsletter" name="improvements" type="checkbox">
+            <label for="newsletter">Newsletter</label>
           </li>
           <li class="checkbox">
-          <input id="videos" value="Videos" name="improvements" type="checkbox">
-            <label for="videos">Videos</label>
+          <input id="online" value="Online Presence" name="improvements" type="checkbox">
+            <label for="online">Online Presence</label>
           </li>
           <li class="checkbox">
-            <input id="meetups" value="City Meetups" name="improvements" type="checkbox">
-            <label for="meetups">City Meetups</label>
+            <input id="process" value="Process and By-laws" name="improvements" type="checkbox">
+            <label for="process">Process and By-laws</label>
           </li>
           <li class="checkbox">
-            <input id="wiki" value="Wiki" name="improvements" type="checkbox">
-            <label for="wiki">Wiki</label>
+            <input id="mentoring" value="Mentoring New Members" name="improvements" type="checkbox">
+            <label for="mentoring">Mentoring New Members</label>
           </li>
           <li class="checkbox">
-            <input id="forum" value="Forum" name="improvements" type="checkbox">
-            <label for="forum">Forum</label>
-          </li>
-          <li class="checkbox">
-            <input id="addl-courses" value="Additional Courses" name="improvements" type="checkbox">
-            <label for="addl-courses">Additional Courses</label>
+            <input id="education" value="Education" name="improvements" type="checkbox">
+            <label for="education">Education</label>
           </li>
         </ul>
       </div>
@@ -127,9 +110,9 @@
         <label for="comments">Any Comments or Suggestions?</label>
       </div>
       <div class="inputs">
-        <textarea id="comments" class="input-field" placeholder="Enter your comments here..."></textarea>
+        <textarea id="comments" class="input-field" placeholder="Comments and suggestions here..."></textarea>
       </div>
-      <input id="submit" type="submit">
+      <input id="submit" type="submit" value="Speak Out!">
     </form>
     </div>
   </body>

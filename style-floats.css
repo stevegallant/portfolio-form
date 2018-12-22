@@ -17,6 +17,12 @@ body {
   padding: 20px 10px 10px
 }
 
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #description {
   text-align: center;
   padding: 1em 0;
@@ -33,10 +39,17 @@ body {
 
 .inputs {
   display: inline-block;
-  width: 80%;
+  width: 90%;
   text-align: left;
   float: left;
   vertical-align: middle;
+}
+
+
+.inputs:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .input-field,
@@ -87,7 +100,10 @@ input[type="checkbox"] {
   border-radius: 2px;
 }
 
-@media screen and (min-width: 520px) {
+/****************************
+Media Queries
+****************************/
+@media screen and (min-width: 700px) {
   .input-field {
     width: 80%;
   }
