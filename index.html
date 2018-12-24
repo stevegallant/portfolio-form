@@ -13,110 +13,92 @@
     <header>
       <h1 id="title">Club Member Survey Form</h1>
     </header>
-    
-    <div class="container">
-      <p id="description">Let's make our club better</p>
 
-    <form id="survey-form">
-      <div class="labels">
-        <label id="name-label" for="name">* Name:</label>
-      </div>
-      <div class="inputs">
-      <input id="name" class="input-field" type="text" placeholder="Enter your name" required>
-      </div>
-      <div class="labels">
-        <label id="email-label" for="email">* Email: </label>
-      </div>
-      <div class="inputs">
+    <section class="main-wrapper">
+      <div class="container">
+        <p id="description">It's YOUR club...improve it!</p>
+
+      <form id="survey-form">
+        <label id="name-label" class="labels" for="name">* Name:</label>
+        <input id="name" class="input-field" type="text" placeholder="Enter your name" required>
+        <label id="email-label" class="labels" for="email">* Email: </label>
         <input id="email" class="input-field" type="email" placeholder="Enter your email" required>
-      </div>
-      <div class="labels">
-        <label for="recommend">* How many years a member?</label>
-      </div>
-      <div class="inputs">
-        <ul style="list-style: none">
-          <li class="radio">
-            <input id="definitely" value="0-1yr" name="recommend" type="radio" checked>
-            <label for="definitely">0 to 1 yr</label>
-          </li>
-          <li class="radio">
-            <input id="maybe" value="1-5yrs" name="recommend" type="radio">
-            <label for="maybe">1 to 5 yrs</label>
-          </li>
-          <li class="radio">
-            <input id="notSure" value="5+yrs" name="recommend" type="radio">
-            <label for="notSure">5+ years</label>
-          </li>
-        </ul>
-      </div>
-      <div class="labels">
-        <label for="dropdown">What do you enjoy most about the club?</label>
-      </div>
-      <div class="inputs">
-        <select id="dropdown" class="dropdown">
-        <option value="">Select an option</option>
-        <option value="socializing">Socializing</option>
-        <option value="clubactivities">Club-organized Activities</option>
-        <option value="smallgroup">Forming smaller-group activities</option>
-        <option value="swag">Cool swag!</option>
-        <option value="other">Other (comment below)</option>
-        </select>
-      </div>
-      <div class="labels">
-        <label for="improvements">Things that should be improved in the future (Check all that apply):</label>
-      </div>
-      <div class="inputs">
-        <ul style="list-style: none">
-          <li class="checkbox">
-            <input id="direction" value="Overall Club Direction" name="improvements" type="checkbox">
-            <label for="direction">Overall Club Direction</label>
-          </li>
-          <li class="checkbox">
-            <input id="meetings" value="Meetings" name="improvements" type="checkbox">
-            <label for="meetings">Meetings</label>
-          </li>
-          <li class="checkbox">
-            <input id="events" value="Events" name="improvements" type="checkbox">
-            <label for="events">Events</label>
-          </li>
-          <li class="checkbox">
-            <input id="finances" value="Finances" name="improvements" type="checkbox">
-            <label for="finances">Finances</label>
-          </li>
-          <li class="checkbox">
-            <input id="merchandise" value="Merchandise" name="improvements" type="checkbox">
-            <label for="merchandise">Merchandise</label>
-          </li>
-          <li class="checkbox">
-            <input id="newsletter" value="Newsletter" name="improvements" type="checkbox">
-            <label for="newsletter">Newsletter</label>
-          </li>
-          <li class="checkbox">
-          <input id="online" value="Online Presence" name="improvements" type="checkbox">
-            <label for="online">Online Presence</label>
-          </li>
-          <li class="checkbox">
-            <input id="process" value="Process and By-laws" name="improvements" type="checkbox">
-            <label for="process">Process and By-laws</label>
-          </li>
-          <li class="checkbox">
-            <input id="mentoring" value="Mentoring New Members" name="improvements" type="checkbox">
-            <label for="mentoring">Mentoring New Members</label>
-          </li>
-          <li class="checkbox">
-            <input id="education" value="Education" name="improvements" type="checkbox">
-            <label for="education">Education</label>
-          </li>
-        </ul>
-      </div>
-      <div class="labels">
-        <label for="comments">Any Comments or Suggestions?</label>
-      </div>
-      <div class="inputs">
-        <textarea id="comments" class="input-field" placeholder="Comments and suggestions here..."></textarea>
-      </div>
-      <input id="submit" type="submit" value="Speak Out!">
-    </form>
-    </div>
+        <label for="recommend" class="labels" >* How many years a member?</label>
+        <div>
+          <ul style="list-style: none">
+            <li class="radio">
+              <input id="definitely" value="0-1yr" name="recommend" type="radio" checked>
+              <label for="definitely" class="labels" >0 to 1 yr</label>
+            </li>
+            <li class="radio">
+              <input id="maybe" value="1-5yrs" name="recommend" type="radio">
+              <label for="maybe" class="labels">1 to 5 yrs</label>
+            </li>
+            <li class="radio">
+              <input id="notSure" value="5+yrs" name="recommend" type="radio">
+              <label for="notSure" class="labels">5+ years</label>
+            </li>
+          </ul>
+        </div>
+        <label for="dropdown" class="labels">What do you enjoy most about the club?</label>
+          <select id="dropdown" class="dropdown input-field">
+            <option value="">Select an option</option>
+            <option value="socializing">Socializing</option>
+            <option value="clubactivities">Club-organized Activities</option>
+            <option value="smallgroup">Forming smaller-group activities</option>
+            <option value="swag">Cool swag!</option>
+            <option value="other">Other (comment below)</option>
+          </select>
+          <label for="improvements" class="labels">Things that should be improved in the future (Check all that apply):</label>
+        <div class="inputs">
+          <ul style="list-style: none">
+            <li class="checkbox">
+              <input id="direction" value="Overall Club Direction" name="improvements" type="checkbox">
+              <label for="direction">Overall Club Direction</label>
+            </li>
+            <li class="checkbox">
+              <input id="meetings" value="Meetings" name="improvements" type="checkbox">
+              <label for="meetings">Meetings</label>
+            </li>
+            <li class="checkbox">
+              <input id="events" value="Events" name="improvements" type="checkbox">
+              <label for="events">Events</label>
+            </li>
+            <li class="checkbox">
+              <input id="finances" value="Finances" name="improvements" type="checkbox">
+              <label for="finances">Finances</label>
+            </li>
+            <li class="checkbox">
+              <input id="merchandise" value="Merchandise" name="improvements" type="checkbox">
+              <label for="merchandise">Merchandise</label>
+            </li>
+            <li class="checkbox">
+              <input id="newsletter" value="Newsletter" name="improvements" type="checkbox">
+              <label for="newsletter">Newsletter</label>
+            </li>
+            <li class="checkbox">
+            <input id="online" value="Online Presence" name="improvements" type="checkbox">
+              <label for="online">Online Presence</label>
+            </li>
+            <li class="checkbox">
+              <input id="process" value="Process and By-laws" name="improvements" type="checkbox">
+              <label for="process">Process and By-laws</label>
+            </li>
+            <li class="checkbox">
+              <input id="mentoring" value="Mentoring New Members" name="improvements" type="checkbox">
+              <label for="mentoring">Mentoring New Members</label>
+            </li>
+            <li class="checkbox">
+              <input id="education" value="Education" name="improvements" type="checkbox">
+              <label for="education">Education</label>
+            </li>
+          </ul>
+        </div>
+          <label for="comments" class="labels">Any Comments or Suggestions?</label>
+          <textarea id="comments" class="input-field" placeholder="Comments and suggestions here..."></textarea>
+        <input id="submit" type="submit" value="Speak Out!">
+      </form>
+      </div>  <!-- end container -->
+    </section>
   </body>
 </html>
