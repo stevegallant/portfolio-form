@@ -118,7 +118,7 @@ Media Queries
   #description {
     font-size: 1.3em;
   }
-  
+
   #survey-form {
     grid-template-columns: minmax(400px, 50vw);
     grid-row-gap: 10px;
