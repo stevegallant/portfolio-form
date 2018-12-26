@@ -6,16 +6,21 @@ Sample Responsive Form
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
   font-family: 'PT Sans', sans-serif;
 }
 
 body {
-  background-color: #c6bcb6;
+  background: #c6bcb6 url("https://photos.smugmug.com/Dev/Images/i-XBWtMFk/0/a54a5678/XL/27958wide-XL.jpg") center / cover no-repeat fixed;
   text-align: center;
   min-width: 320px;
+}
+
+header {
+  background-color: rgba(22,24,24,0.7);
+  color: white;
+  position: relative;
+  padding: 25px 0;
+  box-shadow: 0 4px 8px black;
 }
 
 h1 {
@@ -29,20 +34,19 @@ h1 {
 }
 
 .container {
-  background-color: #ffffe6;
+  background-color: rgba(22,24,24,0.7);
   border-radius: 10px;
-  max-width: 900px;
   margin: 30px 0;
-  padding: 20px 10px 10px
+  padding: 30px 5vw;
   border: 2px solid rgba(0,0,0,0.6);
   box-shadow: 5px 6px 7px black;
+  color: white;
 }
 
 #survey-form {
   display: grid;
   grid-template-columns: minmax(150px, 300px);
   grid-row-gap: 5px;
-  /* text-align: left; */
 }
 
 #description {
@@ -51,73 +55,70 @@ h1 {
 }
 
 .labels {
-  /* display: inline-block;
-  width: 100%;*/
   text-align: left;
-  /*padding: 5px;
-  vertical-align: top;*/
   margin-top: 10px;
 }
 
-.inputs {
-  /* display: inline-block;
-  width: 90%; */
-  text-align: left;
-  /*vertical-align: middle; */
+.input-field {
+  height: 35px;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: lightgrey;
 }
 
-.input-field,
-textarea {
-  /* height: 20px;
-  width: 100%;
-  padding: .5em;
-  margin: 10px;
-  border-radius: 2px;
-  border: 1px solid #c0c0c0; */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 5px white;
+  background-color: white;
 }
 
 #comments {
   resize: vertical;
   height: 60px;
+  padding-top: 2px;
+  padding-left: 5px;
 }
 
 .radio,
 .checkbox {
-  /* position: relative;
-  left: -43px;
-  margin-left: 10px;
-  padding-bottom: 10px; */
+  text-align: left;
 }
 
-/* input[type="radio"],
-input[type="checkbox"] {
-  float: left;
-
-} */
 .dropdown {
   height: 30px;
-  /* width: 100%; */
-  /* padding: .5em;
-  margin: 10px;
-  margin-top: 15px;
-  border: 1px solid #c0c0c0;
-  border-radius: 2px; */
 }
 
 #submit {
   display: block;
-  margin: 0 auto;
+  width: 150px;
+  margin: 15px auto 0;
   padding: 5px 15px;
   color: white;
   background-color: #0d9d54;
   border: 1px solid #c0c0c0;
-  border-radius: 2px;
+  border-radius: 5px;
+  transition: background-color .5s;
+  transition: box-shadow .6s;
+}
+
+#submit:hover {
+  background-color: white;
+  color: #0d9d54;
+  font-weight: bold;
+  box-shadow: 0 0 5px white;
 }
 
 /****************************
 Media Queries
 ****************************/
 @media screen and (min-width: 500px) {
+  #description {
+    font-size: 1.3em;
+  }
+  
   #survey-form {
     grid-template-columns: minmax(400px, 50vw);
     grid-row-gap: 10px;
@@ -131,26 +132,25 @@ Media Queries
   }
 
   .container {
-
+    margin: 100px 10vw;
   }
 
   #survey-form {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 40% auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 10px;
+    align-items: start;
+    padding-right: 20px;
   }
 
-  .input-field {
-    /* width: 80%; */
+  .labels {
+    margin: 0;
+    text-align: right;
   }
-  .dropdown {
-    /* width: 90%; */
-  }
-    .labels {
-    /* width: 40%; */
-    /* text-align: right; */
-  }
-  .inputs {
-    /* width: 40%; */
-    /* float: none; */
+
+  #submit {
+    grid-column: 1 / 3;
+    width: 200px;
   }
 }
 
@@ -160,18 +160,5 @@ Media Queries
     font-size: 2.5em;
   }
 
-  p,
-  .labels,
-  input,
 
-  .container {
-    margin: 50px 20vw;
-  }
-
-  .input-field {
-    /* width: 280px; */
-  }
-  .dropdown {
-    /* width: 145px; */
-  }
 }
